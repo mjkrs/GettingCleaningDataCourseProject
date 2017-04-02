@@ -35,12 +35,16 @@ for each Variable related to a mean or standard deviation, an average value (ave
 Subject-Activity-Measurement Variable triples.
 
 ## Methods
-1. The file features.txt was read into an R data frame and the rows holding variable name that
+1.The file features.txt was read into an R data frame (features) and the rows holding variable name that
 have one among ("Mean","mean", "std") in them were extracted- specifically, both the variable names
-and the indices were extrated into separate vectors. A copy of the data frame holding the original info
+and the indices were extrated into separate vectors. The extracted indices correspond to columns to be retained in both X_train.txt and X_test.txt. A copy (featuresTagged) of the data frame holding the original info
 held in features.txt was made and the variable names that did not contain one among ("Mean","mean", "std")
 were given the designation "garbage". 
 
-2.A copy
+2.The file train/X_train.txt was read into an R data frame (trainXData) using the Varible column of featuresTagged
+as the column names. trainXData was next subsetted- keeping only those columns that did not have "garbage" in their name.
 
-The extracted indices correspond to columns to be retained in both X_train.txt and X_test.txt.
+3.The files train/subject_train.txt and train/y_train.txt were also read into separate R data frames. These data frames were next column bound to trainXData using the cbind function. The names of trainXData are now what they were followed by "Activity" and "Subject". 
+
+4.At this point, all of the measure variables are separate variables in the dataset. This- per my interpretation of tidy data- (echoed by mentor David Hood here <a href="https://thoughtfulbloke.wordpress.com/2015/09/09/getting-and-cleaning-the-assignment/" title="Link to David Hood's page regarding the assignment!">David Hood's page</a>) is a problem.
+
