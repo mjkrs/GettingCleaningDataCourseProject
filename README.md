@@ -1,7 +1,7 @@
 # GettingCleaningDataCourseProject
 Course Project for Coursera's Data Science::Getting and Cleaning Data
 
-##Overview
+## Overview
 We were provided with data measuring signals for linear and rotational movements performed
 by subjects wearing smartphones. There were 30 subjects in all, but 70% of them were assign to 
 a "train" group" and 30% to a "test" group. These movements were tied to 6 gross motor activities-
