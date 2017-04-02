@@ -34,3 +34,13 @@ or standard deviation of a measurement and to ultimately write out: for each Sub
 for each Variable related to a mean or standard deviation, an average value (averaged over
 Subject-Activity-Measurement Variable triples.
 
+## Methods
+1. The file features.txt was read into an R data frame and the rows holding variable name that
+have one among ("Mean","mean", "std") in them were extracted- specifically, both the variable names
+and the indices were extrated into separate vectors. A copy of the data frame holding the original info
+held in features.txt was made and the variable names that did not contain one among ("Mean","mean", "std")
+were given the designation "garbage". 
+
+2.A copy
+
+The extracted indices correspond to columns to be retained in both X_train.txt and X_test.txt.
