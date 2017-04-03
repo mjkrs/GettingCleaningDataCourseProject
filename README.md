@@ -1,6 +1,23 @@
 # GettingCleaningDataCourseProject
 Course Project for Coursera's Data Science::Getting and Cleaning Data
 
+### How to run script to regenerate tidy data
+1. Download UCI_HAR data folder for project (provided on Coursera link for this project) and unzip it into your working directory.   
+2. Load the script run_analysis.R into your working directory. Source the script. For this step. Use the following commands:  
+```R  
+fn<-"https://raw.githubusercontent.com/rawnoob25/GettingCleaningDataCourseProject/master/run_analysis.R"
+download.file(fn,destfile="run_analysis.R")  
+source("run_analysis.R")  
+```
+You should now get have tidyAverages.txt in your working directory.
+
+### How to load Tidy dataset into R
+Use command 
+```R
+tidy<-read.table("tidyAverages.txt",header=T)  
+View(tidy)  
+```
+
 ## Included Files
 * README.md (The Readme)  
 * CodeBook.md (Contains list of variable names in the tidy dataset and the values that they can take on)  
@@ -17,23 +34,6 @@ Subject,Activity, Measurement Statistic name, and Measurement statistic value. M
 is encoded in the column "Variable" and measurement statistic value is encoded in the column "Measurement".  
 The observational unit the entirety of measurements performed in the UCI HAR study- this includes BOTH  
 the "train" group AND the "test" group. 
-
-### How to load Tidy dataset into R
-Use command 
-```R
-tidy<-read.table("tidyAverages.txt",header=T)  
-View(tidy)  
-```
-### How to run script to regenerate tidy data
-1. Download UCI_HAR data folder for project (provided on Coursera link for this project) and unzip it into your working directory.   
-2. Load the script run_analysis.R into your working directory. Source the script. For this step. Use the following commands:  
-```R  
-fn<-"https://raw.githubusercontent.com/rawnoob25/GettingCleaningDataCourseProject/master/run_analysis.R"
-download.file(fn,destfile="run_analysis.R")  
-source("run_analysis.R")  
-```
-You should now get have tidyAverages.txt in your working directory.
-
 
 ## Overview
 We were provided with data measuring signals for linear and rotational movements performed
