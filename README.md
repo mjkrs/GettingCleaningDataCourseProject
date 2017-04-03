@@ -1,6 +1,35 @@
 # GettingCleaningDataCourseProject
 Course Project for Coursera's Data Science::Getting and Cleaning Data
 
+## Included Files
+* README.md (The Readme)  
+* CodeBook.md (Contains list of variable names in the tidy dataset and the values that they can take on)  
+* run_analysis.R (The script to generate the tidy data from the files in UCI_HAR folder included with the project description on Coursera)  
+* tidyAverages.txt (the tidy dataset)  
+
+## Remarks on Tidy data, how to load tidy data file into R and how to run script to regenerate tidy data
+
+### Remarks on Tidy data
+A tidy data set contains one row per observation, one column per variable, and  
+one table per observational unit. In this case the observations are Subject-Activity-(Measurement Statistic) triples.  
+The tidy data set contains one row per such observations. The variables in our scenario are 
+Subject,Activity, Measurement Statistic name, and Measurement statistic value. Measurement statistic name  
+is encoded in the column "Variable" and measurement statistic value is encoded in the column "Measurement".  
+The observational unit the entirety of measurements performed in the UCI HAR study- this includes BOTH  
+the "train" group AND the "test" group. 
+
+### How to load Tidy dataset into R
+Use command 
+```R
+tidy<-read.table("tidyAverages.txt",header=T)  
+View(tidy)  
+```
+### How to run script to regenerate tidy data
+Download UCI_HAR data folder for project (provided on Coursera link for this project) and unzip it into your working directory. Load the script run_analysis.R into your working directory. Source the script. The script will set the working 
+directory to the UCI_HAR data folder, perform the computations to generate the tidy dataset, reset the working directory  
+to your original working directory and write the tidy dataset to the file tidyAverages.txt in your original working directory.
+
+
 ## Overview
 We were provided with data measuring signals for linear and rotational movements performed
 by subjects wearing smartphones. There were 30 subjects in all, but 70% of them were assign to 
