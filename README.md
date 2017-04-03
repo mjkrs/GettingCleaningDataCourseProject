@@ -25,9 +25,14 @@ tidy<-read.table("tidyAverages.txt",header=T)
 View(tidy)  
 ```
 ### How to run script to regenerate tidy data
-Download UCI_HAR data folder for project (provided on Coursera link for this project) and unzip it into your working directory. Load the script run_analysis.R into your working directory. Source the script. The script will set the working 
-directory to the UCI_HAR data folder, perform the computations to generate the tidy dataset, reset the working directory  
-to your original working directory and write the tidy dataset to the file tidyAverages.txt in your original working directory.
+1. Download UCI_HAR data folder for project (provided on Coursera link for this project) and unzip it into your working directory.   
+2. Load the script run_analysis.R into your working directory. Source the script. For this step. Use the following commands:  
+```R  
+fn<-"https://raw.githubusercontent.com/rawnoob25/GettingCleaningDataCourseProject/master/run_analysis.R"
+download.file(fn,destfile="run_analysis.R")  
+source("run_analysis.R")  
+```
+You should now get have tidyAverages.txt in your working directory.
 
 
 ## Overview
