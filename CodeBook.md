@@ -42,7 +42,7 @@ Laying
   
 ## Variable (variables are explicitly as  
 ## they appear in the original datasets train/X_train.txt  
-## and test/X_test.txt)  
+## and test/X_test.txt; units appear to be signal frequency is Hz)  
   
 tBodyAcc-mean()-X  
 tBodyAcc-mean()-Y  
